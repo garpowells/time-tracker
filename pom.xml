@@ -26,7 +26,31 @@
         <module>core</module>
         <module>web</module>
     </modules>
-
+          <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>nexus</id>
+                    <name>dev-unrestricted</name>
+                    <url>http://maven.vie.sst.stp/content/groups/dev-unrestricted/</url>
+                </repository>
+                <repository>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <id>nexus-snapshots</id>
+                    <name>libs-snapshot</name>
+                    <url>http://maven.vie.sst.stp/content/repositories/snapshots/</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>nexus plugins releases</id>
+                    <name>plugins-release</name>
+                    <url>http://maven.vie.sst.stp/content/groups/plugins/</url>
+                </pluginRepository>
+            </pluginRepositories>
     <build>
         <pluginManagement>
             <plugins>
